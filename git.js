@@ -1,0 +1,1 @@
+document.getElementById("name").innerHTML = "Welcome to the Program"
