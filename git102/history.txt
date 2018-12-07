@@ -1,0 +1,23 @@
+Git & GitHub Tutorial for Beginners #2 - Installing Git
+
+~/workspace/javascript101/git (master) $ mkdir test
+
+~/workspace/javascript101/git (master) $ cd test
+
+~/workspace/javascript101/git/test (master) $ touch index.html
+
+~/workspace/javascript101/git/test (master) $ c9 index.html
+
+~/workspace/javascript101/git/test (master) $ ls
+index.html
+
+~/workspace/javascript101/git/test (master) $ rm index.htm
+l
+~/workspace/javascript101/git/test (master) $ ls
+
+~/workspace/javascript101/git/test (master) $ cd ..
+
+~/workspace/javascript101/git (master) $ rmdir test
+
+~/workspace/javascript101/git (master) $ ls
+git101/  git102/
