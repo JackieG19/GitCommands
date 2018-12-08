@@ -32,3 +32,15 @@
 - *Modified*: changed file, not commited
 - *Staging*: add any changed file to staging that you want to commit
 - *Committed*: any file in the staging area are added to the commit when we make one
+
+**Undoing Thing**
+- *checkout commit*: (safe to use)
+    - it will not let you edit anything in any way or ruin your commit history
+    - this will show you a save point whenyou made a commit
+    - any changes don at that save point while in checkout will not be saved
+    - its a read-only, unable to destroy the commit history or alter it.
+- *revert commit*: (somewhat safe to use)
+    - this will undo a particular commit as if it never happened
+- *reset commit*: (CAUTION)
+    - you want to be sure that you need to use this before you do because potentially it could ruin your repository
+    - can permanently delete all commits and your code is going to be back to how it was at certein particular commit
