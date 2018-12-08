@@ -60,7 +60,7 @@ Changes to be committed:
 ~/workspace/git-one (feature-1) $ git commit -m "added new feature file"
 [feature-1 653d0d3] added new feature file
  1 file changed, 1 insertion(+)
- create mode 100644 git102/git-one/feature.js
+ create mode 100644 git-one/feature.js
  
 ~/workspace/git-one (feature-1) $ git checkout master
 Switched to branch 'master'
@@ -107,10 +107,41 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ~/workspace/git-one (feature-a) $ git add .
 
-~/workspace/GitComands/git102/git-one (feature-a) $ git commit -m "added new feature file"
+~/workspace/git-one (feature-a) $ git commit -m "added new feature file"
 [feature-a b13efc2] added new feature file
  1 file changed, 1 insertion(+)
- create mode 100644 git102/git-one/featureA.js
+ create mode 100644 git-one/featureA.js
  
+ ~/workspace/git-one (feature-a) git checkout master
+ Switched to branch 'master'
+  Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)  
+ 
+ ~/workspace/git-one (master) $ git checkout -b feature-b
+Switched to a new branch 'feature-b'
 
+~/workspace/git-one (feature-b) $ touch featureB.js
 
+:~/workspace/git-one (feature-b) $ git status
+On branch feature-b
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        featureB.js 
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/workspace/git-one (feature-b) $ git commit -m "added featureB file"
+[feature-b 9034125] added featureB file
+ 1 files changed, 1 insertion(+)
+ create mode 100644 git-one/featureB.js
+ 
+~/workspace/git-one (master) $ git checkout master
+ Switched to branch 'master'
+ Your branch is up-to-date with 'origin/master'
+ 
+~/workspace/git-one (master) $ git branch -a
+  feature-a
+  feature-b
+* master
+ 
