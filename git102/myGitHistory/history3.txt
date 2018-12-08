@@ -1,0 +1,116 @@
+Git & GitHub Tutorial for Beginners #8 - Branches
+
+~/workspace/git-one (master) $ git status
+
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/workspace/git-one (master) $ git add .
+
+git commit -m "added a p tag"
+[master 144fe33] added a p tag
+ 1 file changed, 1 insertion(+)
+ 
+~/workspace/git-one (master) $ git log --oneline
+ 144fe33 (HEAD -> master) added a p tag
+ 64b40a7 (origin/master, origin/HEAD) staging files in the repo
+ 21f54a2 how git works and creating a repo
+ 
+~/workspace/git-one (master) $ git branch feature-1
+ 
+~/workspace/git-one (master) $ git branch -a
+  feature-1
+* master
+
+~/workspace/git-one (master) $ git checkout feature-1
+Switched to branch 'feature-1'
+
+~/workspace/git-one (feature-1) $ git branch -a
+  master
+* feature-1
+
+~/workspace/git-one (feature-1) $ touch feature.js
+
+~/workspace/git-one (feature-1) $ git status
+On branch feature-1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        feature.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/workspace/git-one (feature-1) $ git add .
+
+~/workspace/git-one (feature-1) $ git status
+On branch feature-1
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   feature.js
+
+~/workspace/git-one (feature-1) $ git commit -m "added new feature file"
+[feature-1 653d0d3] added new feature file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git102/git-one/feature.js
+ 
+~/workspace/git-one (feature-1) $ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+  
+~/workspace/git-one (master) $ ls
+history.txt  index.html  style.css
+
+~/workspace/git-one (master) $ git checkout feature-1
+Switched to branch 'feature-1'
+
+~/workspace/git-one (feature-1) $ ls
+feature.js  history.txt  index.html  style.css
+
+~/workspace/git-one (feature-1) $ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+  
+~/workspace/git-one (master) $ git branch -d feature-1
+error: The branch 'feature-1' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D feature-1'.
+
+~/workspace/git-one (master) $ git branch -D feature-1
+Deleted branch feature-1 (was 653d0d3).
+
+~/workspace/git-one (master) $ git branch -a
+* master
+  
+~/workspace/git-one (master) $ git checkout -b feature-a
+Switched to a new branch 'feature-a'
+
+~/workspace/git-one (feature-a) $ touch featureA.js
+
+:~/workspace/git-one (feature-a) $ git status
+On branch feature-a
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        featureA.js 
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/workspace/git-one (feature-a) $ git add .
+
+~/workspace/GitComands/git102/git-one (feature-a) $ git commit -m "added new feature file"
+[feature-a b13efc2] added new feature file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git102/git-one/featureA.js
+ 
+
+
