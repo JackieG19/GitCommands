@@ -32,3 +32,33 @@
 - *Modified*: changed file, not commited
 - *Staging*: add any changed file to staging that you want to commit
 - *Committed*: any file in the staging area are added to the commit when we make one
+
+**Undoing Thing**
+- *checkout commit*: (safe to use)
+    - it will not let you edit anything in any way or ruin your commit history
+    - this will show you a save point whenyou made a commit
+    - any changes don at that save point while in checkout will not be saved
+    - its a read-only, unable to destroy the commit history or alter it.
+- *revert commit*: (somewhat safe to use)
+    - this will undo a particular commit as if it never happened
+- *reset commit*: (CAUTION)
+    - you want to be sure that you need to use this before you do because potentially it could ruin your repository
+    - can permanently delete all commits and your code is going to be back to how it was at certein particular commit
+
+**Branches**
+- *master branch*
+    - when you create a new repo, you're also creating a master branch
+    - can only commit to this master banch
+    - master branch represent the stable version of your code 
+    - and normally going to be the code which is released or published
+- *Branching*
+    - if you want to add a new feature to your application is to create another branch to try out the new feature
+    - when you create a new branch your kind of copying the stable version of the code
+    - you can work in this code in the new branch
+    - and make a commit to test it out which is called a merge commit 
+    - if you like the new feature and the code is stable then you can merge it to the master branch
+    - if everything goes wrong in this new branch you've tested and messes the code up or doesn't work you can delete this branch  
+    - the delete branch will not affect the master branch and the stable version of code will not be touched
+    
+    
+    

@@ -132,32 +132,30 @@ Changes to be committed:
  
 ~/workspace/gitGithub/git-one (master) $ git log
 commit 7b7c5bc85cdfe8f4cdde1b3f975eb5233bfa18cc (HEAD -> master)
-Author: Jackie <jacgut19@gmail.com>
+Author: Jackie <jackie@email.com>
 Date:   Tue Dec 4 17:24:02 2018 +0000
 
     changed body font size
 
 commit b0453a0e8e877c7ce2add4514e795359dbeb505b
 commit 7b7c5bc85cdfe8f4cdde1b3f975eb5233bfa18cc (HEAD -> master)
-Author: Jackie <jacgut19@gmail.com>
+Author: Jackie <jackie@email.com>
 Date:   Tue Dec 4 17:24:02 2018 +0000
 
     changed body font size
 
 
 commit b0453a0e8e877c7ce2add4514e795359dbeb505b
-Author: Jackie <jacgut19@gmail.com>
+Author: Jackie <jackie@email.com>
 Date:   Tue Dec 4 16:41:07 2018 +0000
 
     changing index title
 
 commit 570b49effb087eda67c1ba63589fb527df29f747
-Author: Jackie <jacgut19@gmail.com>
+Author: Jackie <jackie@gmail.com>
 Date:   Tue Dec 4 16:35:55 2018 +0000
 
 ~/workspace/gitGithub/git-one (master) $ git log --oneline
 7b7c5bc (HEAD -> master) changed body font size
 b0453a0 changing index title
 570b49e added index and style file
-
-
