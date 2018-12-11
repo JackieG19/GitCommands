@@ -1,0 +1,78 @@
+#9 - Merging Branches (& conflicts)
+
+~/workspace/git-one (master) $ git merge feature-a
+ Updating 55b5450...7877423
+ Fast-forward
+ git-one/featureA.js | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git-one/featureA.js
+ 
+~/workspace/git-one (master) $ git merge feature-b
+ Merge made by the 'recursive' strategy.
+ git102/git-one/featureB.js |  1 +
+ 2 files changed, 1 insertion(+)
+ create mode 100644 git-one/featureB.js
+ 
+~/workspace/git-one (master) $ git checkout -b feature-c
+ 
+~/workspace/git-one (master) $ git checkout master
+
+~/workspace/git-one (master) $ git add .
+ On branch master
+ Your branch is ahead of 'origin/master' by 1 commits.
+  (use "git push" to publish your local commits)
+
+        modified:   style.css
+ 
+~/workspace/git-one (master) $ git commit -m "added to the css"
+ [master 6d715da] added to the css
+ 1 files changed, 1 insertions(+)
+ 
+~/workspace/git-one (master) $ git checkout feature-c
+Switched to branch 'feature-c'
+
+~/workspace/git-one (feature-c) $ git status
+On branch feature-c
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/workspace/git-one (feature-c) $ git status
+On branch feature-c
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   style.css
+
+~/workspace/git-one (feature-c) $ git commit -m "added padding to the css file"
+[feature-c b76a67a] added padding to the css file
+ 1 file changed, 1 insertion(+)
+ 
+~/workspace/GitComands/git102/git-one (feature-c) $ git checkout master
+ Switched to branch 'master'
+
+~/workspace/git-one (master) $ git merge feature-c
+Auto-merging git102/git-one/style.css
+CONFLICT (content): Merge conflict in git102/git-one/style.css
+Automatic merge failed; fix conflicts and then commit the result.
+ 
+~/workspace/git-one (master) $ git add .
+
+~/workspace/git-one (master|MERGING) $ git commit
+ [master f816dd3] Merge branch 'feature-c'
+ 
+~/workspace/GitComands/git102/git-one (master) $ git log
+commit f816dd3480c246a982fe16f64992d8c33ee60554 (HEAD -> master)
+Merge: 6d715da b76a67a
+Author: Jackie <jackie@email.com>
+Date:   Sun Dec 9 00:00:55 2018 +0000
+
+    Merge branch 'feature-c'
+
+commit b76a67aa16cea12d335586b2ac18847421256561 (feature-c)
+
+~/workspace/git-one (master) $ 
