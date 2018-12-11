@@ -46,11 +46,12 @@
     - can permanently delete all commits and your code is going to be back to how it was at certein particular commit
 
 **Branches**
-- *master branch*
+- *Master Branch*
     - when you create a new repo, you're also creating a master branch
     - can only commit to this master banch
     - master branch represent the stable version of your code 
     - and normally going to be the code which is released or published
+    
 - *Branching*
     - if you want to add a new feature to your application is to create another branch to try out the new feature
     - when you create a new branch your kind of copying the stable version of the code
@@ -59,6 +60,9 @@
     - if you like the new feature and the code is stable then you can merge it to the master branch
     - if everything goes wrong in this new branch you've tested and messes the code up or doesn't work you can delete this branch  
     - the delete branch will not affect the master branch and the stable version of code will not be touched
+
+- *Merging Branches*
+    - will combine multiple sequences of commits into the master branch 
+    - it will create a new "merge commit" that combines the changes of each queued merge commit sequence
     
-    
-    
+
