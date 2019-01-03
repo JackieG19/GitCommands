@@ -1,0 +1,51 @@
+--- Pushing to Github ---
+
+~/workspace $ cd GitCommands
+
+~/workspace/GitCommands (master) $ mkdir demo-profile
+
+~/workspace/GitCommands (master) $ cd git102
+
+~/workspace/GitCommands/git102 (master) $ cd demo-profile
+
+~/workspace/GitCommands/git102/demo-profile (master) $ touch index.html
+
+~/workspace/GitCommands/git102/demo-profile (master) $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/workspace/GitCommands/git102/demo-profile (master) $ git add .
+
+~/workspace/GitCommands/git102/demo-profile (master) $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index.html
+
+~/workspace/GitCommands/git102/demo-profile (master) $ git commit -m "added index file"
+[master b98ed1b] added index file
+ 1 file changed, 10 insertions(+)
+ create mode 100644 git102/demo-profile/index.html
+ 
+~/workspace/GitCommands/git102/demo-profile (master) $ git remote -v
+origin  git@github.com:JackieG19/GitCommands.git (fetch)
+origin  git@github.com:JackieG19/GitCommands.git (push)
+
+~/workspace/GitCommands/git102/demo-profile (master) $ git push origin master
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 556 bytes | 556.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:JackieG19/GitCommands.git
+   f96b5f8..b98ed1b  master -> master
