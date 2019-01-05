@@ -1,0 +1,104 @@
+--- Collaborating on GitHub ---
+
+~/workspace/GitCommands/git102/demo-profile (master) $ git pull origin master
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From github.com:JackieG19/GitCommands
+ * branch            master     -> FETCH_HEAD
+   b98ed1b..170f0ce  master     -> origin/master
+Updating b98ed1b..170f0ce
+Fast-forward
+ git102/myGitHistory/history5.txt | 51 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 51 insertions(+)
+ create mode 100644 git102/myGitHistory/history5.txt
+ 
+~/workspace/GitCommands/git102/demo-profile (master) $ git checkout -b index-html
+Switched to a new branch 'index-html'
+
+~/workspace/GitCommands/git102/demo-profile (index-html) $ git status
+On branch index-html
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../git-one/index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+~/workspace/GitCommands/git102/demo-profile (index-html) $ git add .
+
+~/workspace/GitCommands/git102/demo-profile (index-html) $ git statusOn branch index-html
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   ../git-one/index.html
+
+~/workspace/GitCommands/git102/demo-profile (index-html) $ git commit -m "added index file"
+[index-html 765deef] added index file
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ 
+~/workspace/GitCommands/git102/demo-profile (index-html) $ git statusOn branch index-html
+nothing to commit, working tree clean
+
+~/workspace/GitCommands/git102/demo-profile (index-html) $ git push origin index-html
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 543 bytes | 543.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'index-html' on GitHub by visiting:
+remote:      https://github.com/JackieG19/GitCommands/pull/new/index-html
+remote: 
+To github.com:JackieG19/GitCommands.git
+ * [new branch]      index-html -> index-html
+ 
+~/workspace/GitCommands/git102/demo-profile (index-html) $ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+~/workspace/GitCommands/git102/demo-profile (master) $ git pull origin
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From github.com:JackieG19/GitCommands
+   170f0ce..faf4fe5  master     -> origin/master
+Updating 170f0ce..faf4fe5
+Fast-forward
+ git102/git-one/index.html | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ 
+~/workspace/GitCommands/git102/demo-profile (master) $ git checkout -b img-update
+Switched to a new branch 'img-update'
+ 
+~/workspace/GitCommands/git102/demo-profile (img-update) $ git status
+On branch img-update
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../git-one/rodeys.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/workspace/GitCommands/git102/demo-profile (img-update) $ git add .
+
+~/workspace/GitCommands/git102/demo-profile (img-update) $ git status
+On branch img-update
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   ../git-one/rodeys.png
+
+~/workspace/GitCommands/git102/demo-profile (img-update) $ git commit -m "added an image"
+[img-update 2b8c221] added an image
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 git102/git-one/rodeys.png
